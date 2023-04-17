@@ -42,12 +42,18 @@
 
 <body>
     <div id="app">
-        <div> <label>이메일:</label> <input type="text" v-model="email"/> <div class="error" v-if="!email"> 제목은 필수 항목입니다.</p> </div>
-        <div> <label>전화번호:</label> <input type="text" v-model="phone" /> <div class="error" v-if="!phone">전화번호는 필수 항목입니다.</p></div>
-        <div> <label>성별:</label> <label><input type="radio" v-model="sex" value="남" />남자</label> <label><input
-                    type="radio" v-model="sex" value="여" />여자</label> <div class="error" v-if="!sex">성별은 필수 항목입니다.</p></div>
-        <script
-            type="text/javascript"> let app = { data() { return { email: '', phone: '', sex: '' }; } }; Vue.createApp(app).mount("#app"); </script>
+        <div>
+            <label>이메일:</label>
+            <input type="text" v-model="email" />
+            <div class="error" v-if="!email"> 제목은 필수 항목입니다.</p></div>
+            <div> <label>전화번호:</label> <input type="text" v-model="phone" />
+            <div class="error" v-if="!phone">전화번호는 필수 항목입니다.</p></div>
+            <div> <label>성별:</label> <label><input type="radio" v-model="sex" value="남" />남자</label> <label><input
+                            type="radio" v-model="sex" value="여" />여자</label>
+                    <div class="error" v-if="!sex">성별은 필수 항목입니다.</p>
+                    </div>
+                    <script
+                        type="text/javascript"> let app = { data() { return { email: '', phone: '', sex: '' }; } }; Vue.createApp(app).mount("#app"); </script>
 </body>
 
 </html>
