@@ -1,10 +1,9 @@
 <html>
-
 <head>
     <meta charset="utf-8" />
     <script src="https://unpkg.com/vue@next"></script>
     <style>
-        div#app {
+        div#box {
             margin: 20px auto;
             padding: 20px;
             width: 300px;
@@ -12,34 +11,38 @@
             box-shadow: 5px 5px 5px #aaa;
         }
 
-        p {
+        h2 {
             font-size: 15pt;
             color: blue;
-        }
-
-        input {
-            width: 30px;
-            height: 30px;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <h1>checkbox</h1>
-        <p>{{ value }}</p>
-        <hr /> <input type="checkbox" v-model="value" />
+        <div id="box">
+            <h1>exam8</h1>
+            <h2 v-bind:>{ num }</h2>
+            <hr>
+            <div>
+                <button v-model="plus">increase</button>
+                <button v-model="minus">decrease</button>
+            </div>
+        </div>
+        
     </div>
     <script
         type="text/javascript"> 
-        let app = { data() 
-            { 
+        let app = { 
+            data() { 
                 return { 
-                    value: false
+                    num:0
                 };
-            }
-        }; 
-    Vue.createApp(app).mount("#app"); </script>
+           }
+           
+        };
+        Vue.createApp(app).mount("#app"); 
+    </script>
 </body>
 
 </html>
